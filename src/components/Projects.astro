@@ -1,0 +1,17 @@
+---
+import { PROJECTS } from '../consts'
+import ProjectCard from './ProjectCard.astro'
+
+---
+
+<section id="projects" class="flex justify-center items-center gap-10 my-20">
+  {PROJECTS.map((project: any) => (
+    <ProjectCard 
+      bgImg={project.bgImg} 
+      title={project.en.title} 
+      shortDesc={project.en.shortDesc} 
+      link={project.link} 
+      repo={project.repo} 
+    />
+  ))}
+</section>
