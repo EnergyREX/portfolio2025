@@ -1,0 +1,17 @@
+---
+import {PROJECTS} from "../../consts";
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+export const getStaticPaths = (() => {
+  let staticPaths: any = [];
+
+  PROJECTS.map((project: any) => (
+    staticPaths.push(project.name)
+  ))
+  return staticPaths
+}) satisfies GetStaticPaths
+---
+
+<Layout title=`EnergyREX's Portfolio | Projects`>
+  
+</Layout>
