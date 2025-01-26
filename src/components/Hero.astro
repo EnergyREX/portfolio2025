@@ -9,7 +9,7 @@ import Available from './Available.astro';
 
 ---
 
-<section class="flex justify-center align-middle py-52 gap-50 h-screen items-center">
+<section id="hero" class="flex justify-center align-middle py-52 gap-50 h-screen items-center">
   <!-- Plain text and others -->
   <div class="flex flex-col gap-6 max-w-100">
     <div class="flex flex-row align-middle"><Available /></div>
@@ -17,9 +17,9 @@ import Available from './Available.astro';
     <h3 class="text-2xl">{HERO_MESSAGES.en.subtitle}</h3>
 
     <div class="flex gap-3">
-      <SocialBtn url={HERO_MESSAGES.en.github}><i class="fa-brands fa-github"></i></SocialBtn>
-      <SocialBtn url={HERO_MESSAGES.en.linkedin}><i class="fa-brands fa-linkedin"></i></SocialBtn>
-      <SocialBtn url="/cv"><i class="fa-solid fa-download"></i> CV
+      <SocialBtn url={HERO_MESSAGES.en.github} title='My GitHub Profile'><i class="fa-brands fa-github"></i></SocialBtn>
+      <SocialBtn url={HERO_MESSAGES.en.linkedin} title='My LinkedIn Profile'><i class="fa-brands fa-linkedin"></i></SocialBtn>
+      <SocialBtn class:list="bg-amber-400 hover:bg-amber-500 dark:bg-yellow-700 font-bold" url="/cv" title='Download my CV'><i class="fa-solid fa-download"></i> CV
     </div>
   </div>
 
