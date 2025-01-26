@@ -1,0 +1,25 @@
+---
+import Link from './Link.astro';
+
+interface Props {
+  bgImg: string;
+  title: string;
+  shortDesc: string;
+  link: string;
+  repo: string;
+}
+
+const { bgImg, title, shortDesc, link, repo } = Astro.props
+---
+
+<div class="flex flex-col border p-5 rounded-lg">
+  <img class="" src={bgImg} alt="">
+  <div class="flex flex-col max-w-100 min-h-50 align-middle justify-center">
+    <h1 class="text-2xl font-bold">{title}</h1>
+    <p>{shortDesc}</p>
+  </div>
+  <div class="flex justify-between">
+    <Link url={repo}><i class="fa-brands fa-github"></i></Link>
+    <Link url={link}>Project</Link>
+  </div>
+</div>
