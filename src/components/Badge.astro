@@ -1,0 +1,15 @@
+---
+// Badge.astro
+interface Props {
+  class: string;
+  alt: string;
+  group: string;
+}
+
+const { class: className, alt, group } = Astro.props;
+---
+
+<div class={`${className} ${group} flex justify-center items-center flex-col p-3 rounded-lg max-w-10 relative`}>
+  <slot />
+  <p class={`${group}-hover:block text-lg text-neutral-600 hidden`}>{alt}</p>
+</div>
