@@ -1,3 +1,7 @@
+// For status (if available or not)
+const STATUS = true;
+
+// Messages for Hero Section, in Spanish and English
 const HERO_MESSAGES: any = {
   es: {
     title: "Hey, Soy Fran.",
@@ -14,10 +18,12 @@ const HERO_MESSAGES: any = {
 
 }
 
-const PROJECTS_CARDS: [Object, Object] = [
+// Project cards, mapped in the projects section
+const PROJECTS: Array<{}> = [
   {
     id: 1,
-    en: {    
+    name: "ollama-chat", 
+    en: {   
       title: "Ollama-Chat",
       shortDesc: "An applicacion who connects and stores in a Database your conversations with the Ollama Chatbot.",
       },
@@ -25,24 +31,47 @@ const PROJECTS_CARDS: [Object, Object] = [
       title: "Ollama-Chat",
       shortDesc: "Una aplicación que conecta y guarda en una base de datos tus conversaciones con la IA Ollama.",
     },
-    link: "/ollama-chat",
+    link: "/projects/ollama-chat",
     repo: "https://github.com/EnergyREX/ollama-chat",
-    bgImg: ""
+    bgImg: "/ollamachat.png"
   },
   {
     id: 1,
+    name: "myclinic",
     en: {    
       title: "DAW's Final Degree Project - MyClinic",
       shortDesc: "An application to manage a clinic appointments, medical records, users... of a clinic. Developed with Laravel.",
+      longDesc: `This project is a simple system to manage clinics, where the users do CRUD operations to manage the clinic.
+      It covers the following fields:
+      - Appointments
+      - Inventory
+      - Medical Records
+      - Treatments
+      - Users
+      In the future, is very possible to create a complex role system, to allow to define roles as the user want, with a permissions system.
+      `
       },
     es: {
       title: "Trabajo de Final de Grado - MyClinic",
       shortDesc: "Una aplicación para administrar citas, registros médicos, usuarios... de una clínica. Desarrollado con Laravel.",
+      longDesc: ` Este proyecto se trata de un sistema simple para la gestión de clínicas de 
+      salud, donde los usuarios, hacen operaciones CRUD para administrar la
+      clínica. Cubre los siguientes campos:
+        · Citas
+        · Inventario
+        · Historial Médico
+        · Tratamientos
+        · Usuarios
+      Es posible que también, en el futuro, se cree un sistema de roles, para poder
+      definir los roles como se plazca gracias a un sistema de permisos que tendría
+      cada usuario.
+      El idioma principalmente del proyecto, será en inglés, sin embargo, se podría
+      poner una función de accesibilidad para poder cambiar de idioma.`
     },
-    link: "/myclinic",
-    repo: "https://github.com/EnergyREX/ollama-chat",
+    link: "/projects/myclinic",
+    repo: "https://github.com/EnergyREX/DAW-TFG",
     bgImg: ""
   }
 ] 
 
-export {HERO_MESSAGES}
+export {HERO_MESSAGES, STATUS, PROJECTS}
