@@ -1,5 +1,6 @@
 ---
 // Badge.astro
+// TODO Fix group effects with i elements 
 interface Props {
   class: string;
   alt: string;
@@ -8,7 +9,7 @@ interface Props {
 const { class: className, alt } = Astro.props;
 ---
 
-<div class={`${className} group flex justify-center items-center flex-col p-3 rounded-lg max-w-10 relative`}>
+<div class={`${className} group flex justify-center items-center flex-col p-3 rounded-lg max-w-20 relative max-h-20`}>
   <slot />
   <p class={`group-hover:block text-lg text-neutral-600 hidden`}>{alt}</p>
 </div>
