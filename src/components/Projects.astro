@@ -4,7 +4,8 @@ import ProjectCard from './ProjectCard.astro'
 
 ---
 
-<section id="projects" class="flex justify-center items-center gap-10 my-20">
+<section id="projects" class="flex justify-center items-center gap-10 my-20 mx-35">
+  <div class="grid grid-cols-1 gap-10 xl:grid-cols-3">
   {PROJECTS.map((project: any) => (
     <ProjectCard 
       bgImg={project.bgImg} 
@@ -14,4 +15,5 @@ import ProjectCard from './ProjectCard.astro'
       repo={project.repo} 
     />
   ))}
+  </div>
 </section>

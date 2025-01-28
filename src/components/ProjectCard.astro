@@ -19,7 +19,7 @@ const { bgImg, title, shortDesc, link, repo } = Astro.props
     <p>{shortDesc}</p>
   </div>
   <div class="flex justify-between">
-    <Link url={repo}><i class="fa-brands fa-github"></i></Link>
-    <Link url={link}>Project</Link>
+    <Link class="rounded-sm hover:bg-indigo-400 dark:bg-neutral-800 dark:hover:bg-indigo-600" url={repo} title='Go to project repo'><i class="fa-brands fa-github"></i></Link>
+    <Link class="rounded-sm hover:bg-yellow-400 font-bold dark:bg-neutral-800 dark:hover:bg-yellow-400" url={link} title='Go to project page'>Project</Link>
   </div>
 </article>
