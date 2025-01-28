@@ -4,6 +4,13 @@ import Badge from "./Badge.astro";
 import TypeScriptLogo from "../assets/typescript.svg"
 import AstroLogo from "../assets/astro.svg"
 import TailwindLogo from "../assets/tailwindcss.svg"
+import JavaScriptLogo from "../assets/javascript.svg"
+import CSSLogo from "../assets/css.svg"
+import HTMLLogo from "../assets/html5.svg"
+import ReactLogo from "../assets/react.svg"
+import PHPLogo from "../assets/php.svg"
+import LaravelLogo from "../assets/laravel.svg"
+
 
 ---
 
@@ -11,15 +18,15 @@ import TailwindLogo from "../assets/tailwindcss.svg"
 class="flex flex-col align-middle items-center justify-center px-30 py-15 bg-neutral-200 dark:bg-neutral-950">
   <h1 class="text-5xl font-bold p-3">Main technologies</h1>
   <p class="text-neutral-500 mb-5">Technologies with whom I work mainly</p>
-  <div class="grid grid-cols-3 gap-40 text-7xl border p-5 px-25 py-15 rounded-md border-neutral-400 dark:border-neutral-700">
-    <Badge class="text-amber-600 hover:-translate-y-5 duration-150" alt="HTML"><i class="fa-brands fa-html5"></i></Badge>
-    <Badge class="text-violet-600 hover:-translate-y-5 duration-150" alt="CSS"><i class="fa-brands fa-css"></i></Badge>
-    <Badge class="text-yellow-500 hover:-translate-y-5 duration-150" alt="JavaScript"><i class="fa-brands fa-js"></i></Badge>
-    <Badge class="text-sky-600 hover:-translate-y-5 duration-150" alt="TypeScript"><TypeScriptLogo width={60} height={40} /></Badge>
-    <Badge class="text-blue-800 hover:-translate-y-5 duration-150" alt="TailwindCSS"><TailwindLogo class="text-7xl" width={60} height={40} /></Badge>
-    <Badge class="text-blue-600 hover:-translate-y-5 duration-150" alt="React.js"><i class="fa-brands fa-react"></i></Badge>
-    <Badge class="text-purple-600 hover:-translate-y-5 duration-150" alt="Astro"><AstroLogo /></Badge>
-    <Badge class="text-indigo-500 hover:-translate-y-5 duration-150" alt="PHP"><i class="fa-brands fa-php"></i></Badge>
-    <Badge class="text-red-700 hover:-translate-y-5 duration-150" alt="Laravel"><i class="fa-brands fa-laravel"></i></Badge>
+  <div class="grid grid-cols-4 xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-1 gap-40 text-7xl border p-5 px-25 py-15 rounded-md border-neutral-400 dark:border-neutral-700">
+    <Badge class="fill-amber-600 hover:-translate-y-5 duration-150 w-20" alt="HTML"><HTMLLogo /></Badge>
+    <Badge class="fill-violet-600 hover:-translate-y-5 duration-150" alt="CSS"><CSSLogo /></Badge>
+    <Badge class="fill-yellow-500 hover:-translate-y-5 duration-150" alt="JavaScript"><JavaScriptLogo /></Badge>
+    <Badge class="fill-sky-600 hover:-translate-y-5 duration-150" alt="TypeScript"><TypeScriptLogo /></Badge>
+    <Badge class="fill-blue-800 hover:-translate-y-5 duration-150" alt="TailwindCSS"><TailwindLogo /></Badge>
+    <Badge class="fill-blue-400 hover:-translate-y-5 duration-150" alt="React.js"><ReactLogo /></Badge>
+    <Badge class="fill-purple-600 dark:stroke-purple-600 hover:-translate-y-5 duration-150" alt="Astro"><AstroLogo /></Badge>
+    <Badge class="fill-indigo-500 hover:-translate-y-5 duration-150" alt="PHP"><PHPLogo /></Badge>
+    <Badge class="fill-red-700 hover:-translate-y-5 duration-150" alt="Laravel"><LaravelLogo /></Badge>
   </div>
 </section>
