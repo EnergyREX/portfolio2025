@@ -1,4 +1,6 @@
 ---
+import { NAVBAR } from '../consts'
+
 const { language } = Astro.params;
 ---
 
@@ -12,17 +14,17 @@ const { language } = Astro.params;
 
 <!-- Links -->
   <div class="flex gap-6 text-xl font-medium">
-    <a href=`/${language}/`>Home</a>
-    <a href=`/${language}/projects`>Projects</a>
-    <a href=`/${language}/about`>About</a>
-    <a href="mailto:fran.j.martin04@gmail.com">Contact</a>
+    <a href=`/${language}/`>{NAVBAR[language].home}</a>
+    <a href=`/${language}/projects`>{NAVBAR[language].projects}</a>
+    <a href=`/${language}/about`>{NAVBAR[language].about}</a>
+    <a href="mailto:fran.j.martin04@gmail.com">{NAVBAR[language].contact}</a>
 
 <!-- Functions -->
   <div>
     <select id="themeToggler" class="text-lg px-2 border rounded-md border-neutral-400 dark:border-neutral-800">
-      <option value="" class="dark:bg-neutral-900 rounded-lg">Select theme</option>
-      <option value="light" class="dark:bg-neutral-900">Light theme</option>
-      <option value="dark" class="dark:bg-neutral-900">Dark theme</option>
+      <option value="" class="dark:bg-neutral-900 rounded-lg">{NAVBAR[language].theme.select}</option>
+      <option value="light" class="dark:bg-neutral-900">{NAVBAR[language].theme.light}</option>
+      <option value="dark" class="dark:bg-neutral-900">{NAVBAR[language].theme.dark}</option>
     </select>
   </div>
   </div>
