@@ -1,0 +1,1 @@
+export default SUPPORTED_LANG = ['es', 'en']
