@@ -2,6 +2,8 @@
 import { PROJECTS } from '../consts'
 import ProjectCard from './ProjectCard.astro'
 
+const { language } = Astro.params 
+
 ---
 
 <section id="projects" class="flex justify-center items-center gap-10 my-20 mx-35">
@@ -9,9 +11,9 @@ import ProjectCard from './ProjectCard.astro'
   {PROJECTS.map((project: any) => (
     <ProjectCard 
       bgImg={project.bgImg} 
-      title={project.en.title} 
-      shortDesc={project.en.shortDesc} 
-      link={project.link} 
+      title={project[language].title} 
+      shortDesc={project[language].shortDesc} 
+      link={`.${project.link}`} 
       repo={project.repo} 
     />
   ))}
