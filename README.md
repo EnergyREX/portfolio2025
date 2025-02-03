@@ -10,7 +10,7 @@ This is my personal portfolio, built with Astro and TailwindCSS
 ## Features, and planned features
 
 - Main, Projects and Contact pages
-- Language toggler
+- English and Spanish language support (still working on it).
 - Dark theme
 - Theme toggler
 - Availability
