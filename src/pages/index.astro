@@ -1,15 +1,24 @@
 ---
-import Hero from '../components/Hero.astro';
-import Technologies from '../components/Technologies.astro';
-import Projects from '../components/Projects.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css"
----
+import { SUPPORTED_LANG } from '../consts';
 
-<Layout title="EnergyREX's Portfolio">
+const supported = SUPPORTED_LANG;
+---
 	<main class="flex justify-center align-middle flex-col">
-		<Hero />
-		<Technologies />
-		<Projects />
+		<div data-supported={supported} />
+		<script type="module" client:load>
+			const userLang = window.navigator.language || window.navigator.userLanguage;	
+			
+			document.addEventListener('DOMContentLoaded', function() {
+				if (userLang === 'es' || userLang === 'es_ES' || userLang === 'es-ES') {
+					window.location.replace('./es')
+				} else {
+					window.location.replace('./en')
+				}
+			})
+			
+			// window.location.replace('./es')
+
+		</script>
   </main>
-</Layout>
