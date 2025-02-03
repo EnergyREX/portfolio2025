@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css"
+import AboutSection from "../../components/AboutSection.astro";
+
+import { SUPPORTED_LANG } from "../../consts"
+import type { GetStaticPaths } from 'astro';
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+
+export const getStaticPaths = (() => {
+  let staticPaths = SUPPORTED_LANG.map(lang => ({
+    params: { language: lang }
+  }));
+
+  return staticPaths;
+}) satisfies GetStaticPaths;
+
+const { language } = Astro.params
+---
+
+<Layout title="EnergyREX's Portfolio | About">
+  <main>
+    <Header />
+    <AboutSection />
+    <Footer />
+  </main>
+</Layout>
