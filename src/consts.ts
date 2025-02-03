@@ -1,5 +1,44 @@
+
+const SUPPORTED_LANG = ['es', 'en']
+
 // For status (if available or not)
 const STATUS = true;
+
+const NAVBAR = {
+  en: {
+    home: 'Home',
+    projects: 'Projects',
+    about: 'About',
+    contact: 'Contact',
+    theme: {
+      select: 'Select theme',
+      dark: 'Dark',
+      light: 'Light'
+    }
+  },
+  es: {
+    home: 'Inicio',
+    projects: 'Proyectos',
+    about: 'Sobre mí',
+    contact: 'Contacto',
+    theme: {
+      select: 'Elige un tema',
+      dark: 'Oscuro',
+      light: 'Claro'
+    }
+  }
+};
+
+const AVAILABILITY_MSG = {
+  es: {
+    not: 'Ocupado',
+    yes: 'Disponible'
+  },
+  en: {
+    not: 'Unavailable',
+    yes: 'Available'
+  }
+}
 
 const ABOUT: any = {
   en: {
@@ -29,6 +68,17 @@ const HERO_MESSAGES: any = {
 
 }
 
+const TECHNOLOGIES = {
+  es: {
+    title: 'Tecnologías principales',
+    subtitle: 'Tecnologías con las que trabajo'
+  },
+  en: {
+    title: 'Main technologies',
+    subtitle: 'Technologies with whom I work mainly'
+  }
+}
+
 // Project cards, mapped in the projects section
 const PROJECTS: Array<{}> = [
   {
@@ -37,10 +87,12 @@ const PROJECTS: Array<{}> = [
     en: {   
       title: "Ollama-Chat",
       shortDesc: "An applicacion who connects and stores in a Database your conversations with the Ollama Chatbot.",
+      button: 'Project'
       },
     es: {
       title: "Ollama-Chat",
       shortDesc: "Una aplicación que conecta y guarda en una base de datos tus conversaciones con la IA Ollama.",
+      button: 'Proyecto'
     },
     link: "/projects/ollama-chat",
     repo: "https://github.com/EnergyREX/ollama-chat",
@@ -80,9 +132,9 @@ const PROJECTS: Array<{}> = [
       poner una función de accesibilidad para poder cambiar de idioma.`
     },
     link: "/projects/myclinic",
-    repo: "https://github.com/EnergyREX/DAW-TFG",
+    repo: "https://github.com/EnergyREX/TFG-DAW",
     bgImg: ""
   }
 ] 
 
-export {ABOUT, HERO_MESSAGES, STATUS, PROJECTS}
+export {SUPPORTED_LANG, NAVBAR, ABOUT, AVAILABILITY_MSG ,TECHNOLOGIES, HERO_MESSAGES, STATUS, PROJECTS}
