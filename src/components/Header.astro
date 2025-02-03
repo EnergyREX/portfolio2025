@@ -1,16 +1,20 @@
+---
+const { language } = Astro.params;
+---
+
 <nav class="flex justify-between align-middle mx-50 px-4 pt-5 border-b border-neutral-300 pb-5 dark:border-neutral-800">
 <!-- Name-logo (to root) -->
   <div>
-    <a href="/">
+    <a href=`/${language}`>
       <h1 class="text-xl font-black">EnergyREX</h1>
     </a>
   </div>
 
 <!-- Links -->
   <div class="flex gap-6 text-xl font-medium">
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/about">About</a>
+    <a href=`/${language}/`>Home</a>
+    <a href=`/${language}/projects`>Projects</a>
+    <a href=`/${language}/about`>About</a>
     <a href="mailto:fran.j.martin04@gmail.com">Contact</a>
 
 <!-- Functions -->
