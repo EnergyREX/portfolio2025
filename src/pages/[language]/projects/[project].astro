@@ -1,9 +1,17 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 
-import { PROJECTS } from "../../../consts";
-import { SUPPORTED_LANG } from "../../../consts"
+import { PROJECTS } from "../../../constants/projects";
+import { SUPPORTED_LANG } from "../../../constants/consts"
 import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (() => {
+  let staticPaths = SUPPORTED_LANG.map(lang => ({
+    params: { language: lang }
+  }));
+
+  return staticPaths;
+}) satisfies GetStaticPaths;
 
 ---
 
