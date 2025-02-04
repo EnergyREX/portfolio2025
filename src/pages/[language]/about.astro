@@ -7,6 +7,7 @@ import { SUPPORTED_LANG } from "../../consts"
 import type { GetStaticPaths } from 'astro';
 import Footer from "../../components/Footer.astro";
 import Header from "../../components/Header.astro";
+import Certificates from "../../components/Certificates.astro";
 
 export const getStaticPaths = (() => {
   let staticPaths = SUPPORTED_LANG.map(lang => ({
@@ -23,6 +24,7 @@ const { language } = Astro.params
   <main>
     <Header />
     <AboutSection />
+    <Certificates />
     <Footer />
   </main>
 </Layout>
