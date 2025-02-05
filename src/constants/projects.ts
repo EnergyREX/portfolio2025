@@ -2,7 +2,7 @@
 const PROJECTS: Array<{}> = [
   {
     id: 0,
-    name: "ollama-chat", 
+    slug: "ollama-chat", 
     en: {   
       title: "Ollama-Chat",
       shortDesc: "An applicacion who connects and stores in a Database your conversations with the Ollama Chatbot.",
@@ -19,7 +19,7 @@ const PROJECTS: Array<{}> = [
   },
   {
     id: 1,
-    name: "myclinic",
+    slug: "myclinic",
     en: {    
       title: "Final Degree Project - MyClinic",
       shortDesc: "An application to manage a clinic appointments, medical records, users... of a clinic. Developed with Laravel.",
