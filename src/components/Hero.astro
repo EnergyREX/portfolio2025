@@ -9,6 +9,8 @@ import Available from './Available.astro';
 import Image from 'astro/components/Image.astro';
 import Link from './Link.astro';
 
+import cv from '../assets/cv.pdf'
+
 import GithubLogo from '../assets/github.svg'
 
 const { language } = Astro.params;
@@ -28,7 +30,7 @@ const { language } = Astro.params;
       url={HERO_MESSAGES[language].github} title='My GitHub Profile'><i class="fa-brands fa-github"></i></Link>
       <Link class="rounded-tl-lg rounded-br-lg dark:border-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-800" 
       url={HERO_MESSAGES[language].linkedin} title='My LinkedIn Profile'><i class="fa-brands fa-linkedin"></i></Link>
-      <Link class:list="bg-amber-400 hover:bg-amber-500 dark:bg-yellow-700 dark:hover:bg-amber-500 dark:border-neutral-600 font-bold" url="/cv" title='Download my CV'><i class="fa-solid fa-download"></i> CV
+      <Link class:list="bg-amber-400 hover:bg-amber-500 dark:bg-yellow-700 dark:hover:bg-amber-500 dark:border-neutral-600 font-bold" url={cv} title='Download my CV' download><i class="fa-solid fa-download"></i> CV
     </div>
   </div>
 
