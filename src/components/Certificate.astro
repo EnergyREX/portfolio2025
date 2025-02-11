@@ -1,11 +1,40 @@
 ---
+import Image from "astro/components/Image.astro"
+import Link from "./Link.astro"
+
+const { issuer, certificate_url, title, details, date, btn } = Astro.props
 ---
 
-<details class="bg-amber-100 text-black">
-  <summary>
-    <p class="text-3xl">Esto es una prueba</p>
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEYuKPm_Tkbfg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1711109220983?e=1743638400&v=beta&t=8CoxoQ_mtEPSnYh-gX2_sCm29QWmNRQcSx96UJ_69e8"
-    width="32" height="32">
+
+<details class="border dark:bg-neutral-800 rounded">
+  <summary class="flex p-2 gap-1.5 align-middle items-center">
+    <div>
+      <Image width="52" height="52" alt={issuer} class="ml-2 rounded"
+      src="https://media.licdn.com/dms/image/v2/D4D0BAQFI49yiiSnKeQ/company-logo_200_200/company-logo_200_200/0/1688551096102/openwebinars_logo?e=1746662400&v=beta&t=jyWUMSbROy7V3_0cif-T4WEiJcQ_rH3rlg7OIZG1Hgo"></Image>
+    </div>
+    <div class="flex flex-col w-full h-full">
+    <div class="flex w-full gap-5 py-0.5 px-2">
+    <h3 class="flex-1 text-lg font-bold">{title}</h3>
+    <h3 class="font-semibold">{date}</h3>
+    </div>
+    <div class="p-2">
+      <Link class="text-base" url={certificate_url}>{btn}</Link>
+      </div>
+  </div>
   </summary>
-  Hola
+  <p class="p-3">{details}</p>
 </details>
+
+<!-- 
+<details class="bg-neutral-700 rounded">
+  <summary class="flex p-2 gap-1.5"><Image width="64" height="64" alt="Openwebinars logo"
+    src="https://media.licdn.com/dms/image/v2/D4D0BAQFI49yiiSnKeQ/company-logo_200_200/company-logo_200_200/0/1688551096102/openwebinars_logo?e=1746662400&v=beta&t=jyWUMSbROy7V3_0cif-T4WEiJcQ_rH3rlg7OIZG1Hgo"></Image>
+    <h3 class="text-lg font-bold">Curso de Figma</h3>
+    <h3>Openwebinars</h3>
+    <h3>Enero 2025</h3>
+    <Link class="text-lg p-1 px-0" url="https://openwebinars.net/cert/VhOQ" title="Titulo OpenWebinars">Credencial</Link>
+
+  </summary>
+    Este curso lo completé en Enero de 2025. En el mismo, se hablaba sobre cómo usar y desarrollar con Astro.
+</details>
+ -->

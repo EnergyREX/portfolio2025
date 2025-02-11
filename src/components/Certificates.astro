@@ -1,9 +1,23 @@
 ---
   import Certificate from '../components/Certificate.astro'
 
+  import {CERTIFICATE_TITLE} from '../constants/certificate'
+  import {CERTIFICATES} from '../constants/certificate'
+
+  const { language } = Astro.params
 ---
 
-<section>
-  <h1 class="text-2xl font-bold">Certifications and Degrees</h1>
-
+<section class="flex flex-col mx-70 my-6">
+  <h1 class="text-2xl font-bold my-4">{CERTIFICATE_TITLE[language].title}</h1>
+  <section class="flex flex-col gap-5">
+  {CERTIFICATES.map((certificate: any) => (
+    <Certificate 
+    issuer={certificate.issuer}
+    title={certificate[language].title}
+    date={certificate[language].date}
+    certificate_url={certificate.certificate_url}
+    details={certificate[language].details}
+    btn={certificate[language].btn}></Certificate>
+  ))}
+  </section>
 </section>
