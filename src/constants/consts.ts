@@ -6,12 +6,12 @@ const STATUS = true;
 
 const AVAILABILITY_MSG = {
   es: {
-    not: 'Ocupado',
-    yes: 'Disponible'
+    not: 'No disponible para trabajar',
+    yes: 'Disponible para trabajar'
   },
   en: {
-    not: 'Unavailable',
-    yes: 'Available'
+    not: 'Unavailable to work',
+    yes: 'Available to work'
   }
 }
 
