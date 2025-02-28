@@ -4,16 +4,16 @@ import { NAVBAR } from '../constants/navbar'
 const { language } = Astro.params;
 ---
 
-<nav class="flex justify-between align-middle mx-50 px-4 pt-5 border-b border-neutral-300 pb-5 dark:border-neutral-800">
+<nav class="nav flex sticky top-0 justify-between bg-stone-950/70 align-middle px-10 md:px-50 pt-5 border-b border-neutral-300 pb-5 dark:border-neutral-800/75">
 <!-- Name-logo (to root) -->
   <div>
     <a href=`/${language}`>
-      <h1 class="text-xl font-black">EnergyREX</h1>
+      <h1 class="hidden md:block text-xl font-black">EnergyREX</h1>
     </a>
   </div>
 
 <!-- Links -->
-  <div class="flex gap-6 text-xl font-medium">
+  <div class="flex gap-6 text-lg md:text-xl font-medium">
     <a href=`/${language}/`>{NAVBAR[language].home}</a>
     <a href=`/${language}/projects`>{NAVBAR[language].projects}</a>
     <a href=`/${language}/about`>{NAVBAR[language].about}</a>
@@ -21,7 +21,7 @@ const { language } = Astro.params;
 
 <!-- Functions -->
   <div>
-    <select id="themeToggler" class="text-lg px-2 border rounded-md border-neutral-400 dark:border-neutral-800">
+    <select id="themeToggler" class="hidden lg:block text-lg px-2 border rounded-md border-neutral-400 dark:border-neutral-00">
       <option value="" class="dark:bg-neutral-900 rounded-lg">{NAVBAR[language].theme.select}</option>
       <option value="light" class="dark:bg-neutral-900">{NAVBAR[language].theme.light}</option>
       <option value="dark" class="dark:bg-neutral-900">{NAVBAR[language].theme.dark}</option>
@@ -29,4 +29,3 @@ const { language } = Astro.params;
   </div>
   </div>
 </nav>
-
