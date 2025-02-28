@@ -7,8 +7,8 @@
   const { language } = Astro.params
 ---
 
-<section class="flex flex-col mx-70 my-6">
-  <h1 class="text-2xl font-bold my-4">{CERTIFICATE_TITLE[language].title}</h1>
+<section class="flex flex-col mx-5 md:mx-70 md:my-6">
+  <h1 class="text-2xl font-bold md:my-4">{CERTIFICATE_TITLE[language].title}</h1>
   <section class="flex flex-col gap-5">
   {CERTIFICATES.map((certificate: any) => (
     <Certificate 
