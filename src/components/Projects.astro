@@ -6,8 +6,8 @@ const { language } = Astro.params
 
 ---
 
-<section id="projects" class="flex justify-center items-center gap-10 my-20 mx-35">
-  <div class="grid grid-cols-1 gap-10 xl:grid-cols-3">
+<section id="projects" class="flex justify-center items-center gap-10 my-3 mx-5 lg:my-20 lg:mx-35">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
   {PROJECTS.map((project: any) => (
     <ProjectCard 
       bgImg={project.bgImg} 
