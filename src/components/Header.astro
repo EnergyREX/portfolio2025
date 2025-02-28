@@ -6,9 +6,9 @@ const { language } = Astro.params;
 
 <nav class="nav flex sticky top-0 justify-between bg-stone-500/70 dark:bg-stone-950/70 align-middle px-10 md:px-50 pt-5 border-b border-neutral-300 pb-5 dark:border-neutral-800/75">
 <!-- Name-logo (to root) -->
-  <div>
-    <a href=`/${language}`>
-      <h1 class="hidden md:block text-xl font-black">EnergyREX</h1>
+  <div class="hidden md:block">
+    <a href=`/${language}` aria-label="Back to homepage">
+      <h1 class="text-xl font-black">EnergyREX</h1>
     </a>
   </div>
 

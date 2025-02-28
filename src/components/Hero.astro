@@ -9,9 +9,10 @@ import Available from './Available.astro';
 import Image from 'astro/components/Image.astro';
 import Link from './Link.astro';
 
-import cv from '../assets/cv.pdf'
+import Linkedin from '../assets/linkedin.svg';
+import Github from '../assets/github.svg';
 
-import GithubLogo from '../assets/github.svg'
+import cv from '../assets/cv.pdf'
 
 const { language } = Astro.params;
 
@@ -22,13 +23,13 @@ const { language } = Astro.params;
   <div class="flex flex-col gap-6 mx-10 max-w-100">
     <div class="flex flex-row align-middle"><Available statusMsg={AVAILABILITY_MSG[language]} /></div>
     <h1 class="text-5xl font-black">{HERO_MESSAGES[language].title}</h1>
-    <h3 class="text-2xl">{HERO_MESSAGES[language].subtitle}</h3>
+    <h2 class="text-2xl">{HERO_MESSAGES[language].subtitle}</h2>
 
     <div class="flex gap-3">
       <Link class="rounded-tl-lg rounded-br-lg dark:border-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-800" 
-      url={HERO_MESSAGES[language].github} title='My GitHub Profile'><i class="fa-brands fa-github"></i></Link>
+      url={HERO_MESSAGES[language].github} title='My GitHub Profile'><Github width={32} height={32}/></Link>
       <Link class="rounded-tl-lg rounded-br-lg dark:border-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-800" 
-      url={HERO_MESSAGES[language].linkedin} title='My LinkedIn Profile'><i class="fa-brands fa-linkedin"></i></Link>
+      url={HERO_MESSAGES[language].linkedin} title='My LinkedIn Profile'><Linkedin width={32} height={32}></Link>
       <Link class:list="bg-amber-400 hover:bg-amber-500 dark:bg-yellow-700 dark:hover:bg-amber-500 dark:border-neutral-600 font-bold" url={cv} title='Download my CV' download><i class="fa-solid fa-download"></i> CV
     </div>
   </div>
