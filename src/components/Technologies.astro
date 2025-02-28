@@ -16,10 +16,10 @@ const { language } = Astro.params;
 ---
 
 <section id="technologies"
-class="flex flex-col align-middle items-center justify-center px-30 py-15 bg-neutral-200 dark:bg-neutral-950">
+class="hidden md:flex flex-col align-middle items-center justify-center px-30 py-15 bg-neutral-200 dark:bg-neutral-950">
   <h1 class="text-5xl font-bold p-3">{TECHNOLOGIES[language].title}</h1>
   <p class="text-neutral-600 dark:text-neutral-400 mb-5">{TECHNOLOGIES[language].subtitle}</p>
-  <div class="grid grid-cols-4 xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-1 gap-40 text-7xl border p-5 px-25 py-15 rounded-md border-neutral-400 dark:border-neutral-700">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3 gap-40 text-7xl border p-5 px-25 py-15 rounded-md border-neutral-400 dark:border-neutral-700">
     <Badge class="fill-amber-600 hover:-translate-y-5 duration-150 w-20" alt="HTML"><HTMLLogo /></Badge>
     <Badge class="fill-violet-600 hover:-translate-y-5 duration-150" alt="CSS"><CSSLogo /></Badge>
     <Badge class="fill-yellow-500 hover:-translate-y-5 duration-150" alt="JavaScript"><JavaScriptLogo /></Badge>
