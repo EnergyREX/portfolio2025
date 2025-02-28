@@ -19,12 +19,11 @@ const { language } = Astro.params;
 
 <section id="hero" class="flex justify-center align-middle gap-50 h-screen items-center">
   <!-- Plain text and others -->
-  <div class="flex flex-col gap-6 max-w-100">
+  <div class="flex flex-col gap-6 mx-10 max-w-100">
     <div class="flex flex-row align-middle"><Available statusMsg={AVAILABILITY_MSG[language]} /></div>
     <h1 class="text-5xl font-black">{HERO_MESSAGES[language].title}</h1>
     <h3 class="text-2xl">{HERO_MESSAGES[language].subtitle}</h3>
 
-    <!--  rounded-tl-lg rounded-br-lg  -->
     <div class="flex gap-3">
       <Link class="rounded-tl-lg rounded-br-lg dark:border-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-800" 
       url={HERO_MESSAGES[language].github} title='My GitHub Profile'><i class="fa-brands fa-github"></i></Link>
