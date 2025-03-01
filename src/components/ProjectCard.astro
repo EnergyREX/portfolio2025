@@ -1,5 +1,6 @@
 ---
 import Link from './Link.astro';
+import GitHub from '../assets/github.svg'
 
 interface Props {
   bgImg: string;
@@ -19,6 +20,6 @@ const { bgImg, title, shortDesc, link, repo } = Astro.props
     <p>{shortDesc}</p>
   </div>
   <div class="flex justify-between">
-    <Link class="rounded-sm hover:bg-indigo-400 dark:bg-neutral-800 dark:hover:bg-indigo-600" url={repo} title='Go to project repo'><i class="fa-brands fa-github"></i></Link>
+    <Link class="rounded-sm hover:bg-indigo-400 dark:bg-neutral-800 dark:hover:bg-indigo-600" url={repo} title='Go to project repo'><GitHub width={32} height={32} /></Link>
   </div>
 </article>
