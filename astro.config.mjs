@@ -6,7 +6,9 @@ import netlify from "@astrojs/netlify";
 export default defineConfig(
   {
     experimental: {
-      svg: true,
+      svg: {
+        mode: 'sprite'
+      }
     },
 
     vite: {
